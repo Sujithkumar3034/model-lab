@@ -1,0 +1,2874 @@
+Web Application using React
+
+Lab Questions
+
+
+1. Create a Stateless Functional Component
+
+1. You are tasked with creating a functional component called BlogIntroCard for a personal blog. This component should give visitors a title, a personalized welcome message about the blog’s themes, and a warm closing statement. Customize the title, message, and closing to reflect the blog's unique style.
+
+Create a WelcomeCard component as a stateless functional component in React.
+Inside the component:
+•	Display a title, e.g., Welcome to Our App!
+•	Add a short welcome message, e.g., We're glad you're here. Explore and enjoy!
+•	Show a friendly closing statement, e.g., Your App Team
+•	Apply simple inline styles or basic CSS to make the card visually appealing. import React from 'react';
+•	
+•	const WelcomeCard = () => {
+•	  const cardStyle = {
+•	    border: '1px solid #ccc',
+•	    borderRadius: '8px',
+•	    padding: '20px',
+•	    maxWidth: '400px',
+•	    margin: '20px auto',
+•	    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+•	    textAlign: 'center',
+•	    fontFamily: 'Arial, sans-serif',
+•	  };
+•	
+•	  const titleStyle = {
+•	    fontSize: '24px',
+•	    fontWeight: 'bold',
+•	    color: '#333',
+•	  };
+•	
+•	  const messageStyle = {
+•	    fontSize: '16px',
+•	    color: '#555',
+•	    margin: '10px 0',
+•	  };
+•	
+•	  const closingStyle = {
+•	    fontSize: '14px',
+•	    color: '#777',
+•	    fontStyle: 'italic',
+•	  };
+•	
+•	  return (
+•	    <div style={cardStyle}>
+•	      <h2 style={titleStyle}>Welcome to Our App!</h2>
+•	      <p style={messageStyle}>
+•	        We're glad you're here. Explore and enjoy!
+•	      </p>
+•	      <p style={closingStyle}>Your App Team</p>
+•	    </div>
+•	  );
+•	};
+•	
+•	export default WelcomeCard; 
+•	
+2. You are assigned to develop a functional component named ShopGreeting for an online store. This component should include a bold title, a brief message highlighting the store’s key categories or current promotions, and a friendly closing encouraging users to browse products. Tailor the title, message, and closing to match the store’s branding.
+
+Create a WelcomeCard component as a stateless functional component in React.
+Inside the component:
+•	Display a title, e.g., Welcome to Our App!
+•	Add a short welcome message, e.g., We're glad you're here. Explore and enjoy!
+•	Show a friendly closing statement, e.g., Your App Team
+•	Apply simple inline styles or basic CSS to make the card visually appealing.
+ 2)
+import React from 'react';
+
+const WelcomeCard = () => {
+  const cardStyle = {
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    padding: '20px',
+    maxWidth: '400px',
+    margin: '20px auto',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+    textAlign: 'center',
+    fontFamily: 'Arial, sans-serif',
+  };
+
+  const titleStyle = {
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: '#333',
+  };
+
+  const messageStyle = {
+    fontSize: '16px',
+    color: '#555',
+    margin: '10px 0',
+  };
+
+  const closingStyle = {
+    fontSize: '14px',
+    color: '#777',
+    fontStyle: 'italic',
+  };
+
+  return (
+    <div style={cardStyle}>
+      <h2 style={titleStyle}>Welcome to Our App!</h2>
+      <p style={messageStyle}>
+        We're glad you're here. Explore and enjoy!
+      </p>
+      <p style={closingStyle}>Your App Team</p>
+    </div>
+  );
+};
+
+export default WelcomeCard;
+
+
+ 
+
+3. You are responsible for designing a functional component called WelcomeNote for an educational platform. This component should greet students with a header, a concise welcome message that highlights the resources available, and an encouraging closing. Modify the header, message, and closing to best serve the platform’s target audience.
+
+Create a WelcomeCard component as a stateless functional component in React.
+Inside the component:
+•	Display a title, e.g., Welcome to Our App!
+•	Add a short welcome message, e.g., We're glad you're here. Explore and enjoy!
+•	Show a friendly closing statement, e.g., Your App Team
+
+Apply simple inline styles or basic CSS to make the card visually appealing.    import React from 'react';
+
+const WelcomeCard = () => {
+  const cardStyle = {
+    border: '1px solid #ddd',
+    borderRadius: '8px',
+    padding: '20px',
+    maxWidth: '400px',
+    margin: '20px auto',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    textAlign: 'center',
+    fontFamily: 'Arial, sans-serif'
+  };
+
+  const titleStyle = {
+    fontSize: '1.5em',
+    color: '#333',
+    marginBottom: '10px',
+  };
+
+  const messageStyle = {
+    fontSize: '1em',
+    color: '#555',
+    marginBottom: '20px',
+  };
+
+  const closingStyle = {
+    fontSize: '0.9em',
+    color: '#888',
+  };
+
+  return (
+    <div style={cardStyle}>
+      <h1 style={titleStyle}>Welcome to Our App!</h1>
+      <p style={messageStyle}>We're glad you're here. Explore and enjoy the resources available to help you succeed in your learning journey!</p>
+      <p style={closingStyle}>- Your App Team</p>
+    </div>
+  );
+};
+
+export default WelcomeCard;
+
+ 
+2. Create a Stateful Class Component
+
+A photosharing app needs a FavoriteButton component that shows a count of favorites and lets users mark or unmark a photo as a favorite. It should be visually appealing and user-friendly, with customization options for the label, initial count, and favorite icon style to reflect your app’s brand.
+
+
+Create a LikeButton component as a class component in React. Inside the component:
+
+•	Initialize a state variable called likes with a starting value 0.
+•	Display the current likes count in an <h3> element with a label, like Likes: 0.
+•	Add a button that toggles between Like and Unlike each time it’s clicked.
+
+When the button is clicked:
+
+•	If the user has liked the item, increase the likes count by 1 and set the button text to Unlike.
+•	If the user has unliked the item, decrease the likes count by 1 and set the button text to Like.
+•	Style the component minimally for a cleaner look.    
+
+ 
+import React, { Component } from 'react';
+
+class LikeButton extends Component {
+    state = { likes: 0, liked: false };
+
+    handleToggleLike = () => {
+        this.setState((prevState) => ({
+            liked: !prevState.liked,
+            likes: prevState.liked ? prevState.likes - 1 : prevState.likes + 1
+        }));
+    };
+
+    render() {
+        return (
+            <div style={styles.container}>
+                <h1>Welcome to the Like App!!!</h1>
+                <div style={styles.likeButton}>
+                    <button onClick={this.handleToggleLike} style={styles.button}>
+                        {this.state.liked ? 'Unlike' : 'Like'}
+                    </button>
+                    <span style={styles.likesCount}>Likes: {this.state.likes}</span>
+                </div>
+            </div>
+        );
+    }
+}
+
+const styles = {
+    container: {
+        textAlign: 'center',
+        fontFamily: 'Arial, sans-serif',
+        marginTop: '50px'
+    },
+    likeButton: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '20px'
+    },
+    button: {
+        padding: '10px 20px',
+        fontSize: '24px',
+        marginRight: '10px',
+        cursor: 'pointer',
+        backgroundColor: '#f0f0f0',
+        border: '1px solid #ccc',
+        borderRadius: '5px'
+    },
+    likesCount: {
+        fontSize: '24px',
+        color: '#333'
+    }
+};
+
+export default LikeButton;
+2. In a legacy application a new feature called ReactionButton is needed to engage users. This button should display a reaction count and allow users to ‘React’ or ‘Unreact’ to a post. Customize the button label, initial count, and icons based on the reaction style that best fits your app's
+ 
+interaction design.
+
+
+Create a LikeButton component as a class component in React. Inside the component:
+•	Initialize a state variable called likes with a starting value 0.
+•	Display the current likes count in an <h3> element with a label, like Likes: 0.
+•	Add a button that toggles between Like and Unlike each time it’s clicked.
+
+When the button is clicked:
+•	If the user has liked the item, increase the likes count by 1 and set the button text to Unlike.
+•	If the user has unliked the item, decrease the likes count by 1 and set the button text to Like.
+•	Style the component minimally for a cleaner look.    import React, { Component } from 'react';
+•	
+•	class ReactionButton extends Component {
+•	    state = { reactions: 0, reacted: false };
+•	
+•	    handleToggleReaction = () => {
+•	        this.setState((prevState) => ({
+•	            reacted: !prevState.reacted,
+•	            reactions: prevState.reacted ? prevState.reactions - 1 : prevState.reactions + 1
+•	        }));
+•	    };
+•	
+•	    render() {
+•	        return (
+•	            <div style={styles.container}>
+•	                <h1>Welcome to the Reaction App!!!</h1>
+•	                <div style={styles.reactionButton}>
+•	                    <button onClick={this.handleToggleReaction} style={styles.button}>
+•	                        {this.state.reacted ? 'Unreact' : 'React'}
+•	                    </button>
+•	                    <span style={styles.reactionsCount}>Reactions: {this.state.reactions}</span>
+•	                </div>
+•	            </div>
+•	        );
+•	    }
+•	}
+•	
+•	const styles = {
+•	    container: {
+•	        textAlign: 'center',
+•	        fontFamily: 'Arial, sans-serif',
+•	        marginTop: '50px'
+•	    },
+•	    reactionButton: {
+•	        display: 'flex',
+•	        alignItems: 'center',
+•	        justifyContent: 'center',
+•	        marginTop: '20px'
+•	    },
+•	    button: {
+•	        padding: '10px 20px',
+•	        fontSize: '24px',
+•	        marginRight: '10px',
+•	        cursor: 'pointer',
+•	        backgroundColor: '#f0f0f0',
+•	        border: '1px solid #ccc',
+•	        borderRadius: '5px'
+•	    },
+•	    reactionsCount: {
+•	        fontSize: '24px',
+•	        color: '#333'
+•	    }
+•	};
+•	
+•	export default ReactionButton;
+
+ 
+3. An interactive LikeProduct feature is requested to let users like or unlike an item in the e- commerce store. This component should show a count of likes and allow customers to engage with their favorite products. Tailor the button’s label, color scheme, and initial count to match your brand's style.
+ 
+Create a LikeButton component as a class component in React. Inside the component:
+
+•	Initialize a state variable called likes with a starting value 0.
+•	Display the current likes count in an <h3> element with a label, like Likes: 0.
+•	Add a button that toggles between Like and Unlike each time it’s clicked.
+
+When the button is clicked:
+
+•	If the user has liked the item, increase the likes count by 1 and set the button text to Unlike.
+•	If the user has unliked the item, decrease the likes count by 1 and set the button text to Like.
+•	Style the component minimally for a cleaner look.     import React, { Component } from 'react';
+•	
+•	class LikeProduct extends Component {
+•	    state = { likes: 0, liked: false };
+•	
+•	    handleToggleLike = () => {
+•	        this.setState((prevState) => ({
+•	            liked: !prevState.liked,
+•	            likes: prevState.liked ? prevState.likes - 1 : prevState.likes + 1
+•	        }));
+•	    };
+•	
+•	    render() {
+•	        return (
+•	            <div style={styles.container}>
+•	                <h1>Like Your Favorite Product!</h1>
+•	                <div style={styles.likeProduct}>
+•	                    <button onClick={this.handleToggleLike} style={styles.button}>
+•	                        {this.state.liked ? 'Unlike' : 'Like'}
+•	                    </button>
+•	                    <h3 style={styles.likesCount}>Likes: {this.state.likes}</h3>
+•	                </div>
+•	            </div>
+•	        );
+•	    }
+•	}
+•	
+•	const styles = {
+•	    container: {
+•	        textAlign: 'center',
+•	        fontFamily: 'Arial, sans-serif',
+•	        marginTop: '50px'
+•	    },
+•	    likeProduct: {
+•	        display: 'flex',
+•	        alignItems: 'center',
+•	        justifyContent: 'center',
+•	        marginTop: '20px'
+•	    },
+•	    button: {
+•	        padding: '10px 20px',
+•	        fontSize: '20px',
+•	        marginRight: '10px',
+•	        cursor: 'pointer',
+•	        backgroundColor: '#ff6347', // Customize this color to match the brand's style
+•	        color: '#fff',
+•	        border: 'none',
+•	        borderRadius: '5px'
+•	    },
+•	    likesCount: {
+•	        fontSize: '20px',
+•	        color: '#333'
+•	    }
+•	};
+•	
+•	export default LikeProduct;
+
+ 
+3. Implementation of Conditional Rendering using Class Component
+
+1. A UserStatus component is needed for the social networking platform that will display a login button for users who are not logged in and a personalized welcome message for those who are. The component should be customizable, allowing you to define the button text, the welcome message, and any styling to align with your site’s branding.
+
+•	Create a LoginStatus component as a class component in React.
+•	Inside the component:
+o	Initialize a state variable called isLoggedIn with a default value of false.
+o	If isLoggedIn is false, display a Login button.
+o	If isLoggedIn is true, display a welcome message, such as Welcome, User! and a Logout button.
+•	Add an onClick event handler to toggle isLoggedIn when the user clicks Login or Logout.
+•	Style the component minimally to make it clear and user-friendly.
+
+
+import React, { Component } from 'react';
+
+class UserStatus extends Component {
+    state = { isLoggedIn: false };
+
+    handleToggleLogin = () => {
+        this.setState((prevState) => ({
+            isLoggedIn: !prevState.isLoggedIn
+        }));
+    };
+
+    render() {
+        return (
+            <div style={styles.container}>
+                {this.state.isLoggedIn ? (
+                    <div>
+                        <h3 style={styles.message}>Welcome, User!</h3>
+                        <button onClick={this.handleToggleLogin} style={styles.button}>
+                            Logout
+                        </button>
+                    </div>
+                ) : (
+                    <button onClick={this.handleToggleLogin} style={styles.button}>
+                        Login
+                    </button>
+                )}
+            </div>
+        );
+    }
+}
+
+const styles = {
+    container: {
+        textAlign: 'center',
+        fontFamily: 'Arial, sans-serif',
+        marginTop: '50px'
+    },
+    message: {
+        fontSize: '20px',
+        marginBottom: '10px',
+        color: '#333'
+    },
+    button: {
+        padding: '10px 20px',
+        fontSize: '18px',
+        cursor: 'pointer',
+        backgroundColor: '#007bff', // Customize button color here
+        color: '#fff',
+        border: 'none',
+        borderRadius: '5px'
+    }
+};
+
+export default UserStatus;
+ 
+2. The learning platform requires a SessionStatus component to indicate user login status. This component should show a login button for guests and a friendly welcome message for enrolled students. Customize the text for the button and welcome message, as well as the overall design, to enhance the user experience.
+
+
+•	Create a LoginStatus component as a class component in React.
+•	Inside the component:
+o	Initialize a state variable called isLoggedIn with a default value of false.
+o	If isLoggedIn is false, display a Login button.
+o	If isLoggedIn is true, display a welcome message, such as Welcome, User! and a Logout button.
+
+•	Add an onClick event handler to toggle isLoggedIn when the user clicks Login or Logout.
+•	Style the component minimally to make it clear and user-friendly.
+
+
+
+import React, { Component } from 'react';
+
+class SessionStatus extends Component {
+  // Initialize state
+  state = {
+    isLoggedIn: false // Default value for login status
+  };
+
+  // Method to toggle login status
+  toggleLoginStatus = () => {
+    this.setState(prevState => ({
+      isLoggedIn: !prevState.isLoggedIn // Toggle isLoggedIn value
+    }));
+  };
+
+  render() {
+    return (
+      <div style={styles.container}>
+        {this.state.isLoggedIn ? (
+          <div style={styles.loggedIn}>
+            <h2>Welcome, Enrolled Student!</h2>
+            <button onClick={this.toggleLoginStatus} style={styles.button}>
+              Logout
+            </button>
+          </div>
+        ) : (
+          <div style={styles.loggedOut}>
+            <h2>Guest User</h2>
+            <button onClick={this.toggleLoginStatus} style={styles.button}>
+              Login
+            </button>
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
+// Define inline styles for the component
+const styles = {
+  container: {
+    textAlign: 'center',
+    fontFamily: 'Arial, sans-serif',
+    marginTop: '20px',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '10px',
+    maxWidth: '300px',
+    margin: '0 auto',
+    backgroundColor: '#f9f9f9'
+  },
+  loggedIn: {
+    color: '#4CAF50' // Green for logged-in status
+  },
+  loggedOut: {
+    color: '#f44336' // Red for logged-out status
+  },
+  button: {
+    padding: '10px 20px',
+    fontSize: '16px',
+    cursor: 'pointer',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    transition: 'background-color 0.3s ease'
+  }
+};
+
+export default SessionStatus;
+
+ 
+
+
+3. To improve user engagement, an AuthStatus component is requested for the e-commerce application. This component should display a login button for new visitors and a welcome message for returning customers. You can personalize the button text, the welcome message, and the visual style to match your store's theme.
+
+•	Create a LoginStatus component as a class component in React.
+•	Inside the component:
+o	Initialize a state variable called isLoggedIn with a default value of false.
+o	If isLoggedIn is false, display a Login button.
+o	If isLoggedIn is true, display a welcome message, such as Welcome, User! and a Logout button.
+
+•	Add an onClick event handler to toggle isLoggedIn when the user clicks Login or Logout.
+•	Style the component minimally to make it clear and user-friendly.
+
+
+
+import React, { Component } from 'react';
+
+class AuthStatus extends Component {
+  // Initialize state
+  state = {
+    isLoggedIn: false // Default value for login status
+  };
+
+  // Method to toggle login status
+  toggleLoginStatus = () => {
+    this.setState(prevState => ({
+      isLoggedIn: !prevState.isLoggedIn // Toggle isLoggedIn value
+    }));
+  };
+
+  render() {
+    return (
+      <div style={styles.container}>
+        {this.state.isLoggedIn ? (
+          <div style={styles.loggedIn}>
+            <h2>Welcome, Valued Customer!</h2>
+            <button onClick={this.toggleLoginStatus} style={styles.button}>
+              Logout
+            </button>
+          </div>
+        ) : (
+          <div style={styles.loggedOut}>
+            <h2>New Visitor</h2>
+            <button onClick={this.toggleLoginStatus} style={styles.button}>
+              Login
+            </button>
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
+// Define inline styles for the component
+const styles = {
+  container: {
+    textAlign: 'center',
+    fontFamily: 'Arial, sans-serif',
+    marginTop: '20px',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '10px',
+    maxWidth: '300px',
+    margin: '0 auto',
+    backgroundColor: '#f9f9f9'
+  },
+  loggedIn: {
+    color: '#4CAF50' // Green for logged-in status
+  },
+  loggedOut: {
+    color: '#f44336' // Red for logged-out status
+  },
+  button: {
+    padding: '10px 20px',
+    fontSize: '16px',
+    cursor: 'pointer',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    transition: 'background-color 0.3s ease',
+    marginTop: '10px'
+  }
+};
+
+export default AuthStatus;
+
+ 
+4. Implementation of Communication (Parent-child) between Components
+
+1. You are tasked with developing a simple task management feature for a project management tool.
+
+Create a parent component called ProjectTasks that will manage an array of tasks and a child
+component named TaskDetail to display each task's details. Ensure that TaskDetail receives task
+data through props. Customize the layout and styling to align with the tool's overall design.
+
+Create a TaskList component as the parent component in React.
+•	Initialize a state variable called tasks, which is an array of task objects.Each task object should
+•	have a name (string) and a completed status boolean.
+•	Inside the TaskList component, map over the tasks array and render a TaskItem component for
+•	each task. Pass the name and completed status as props to TaskItem.
+
+Create a TaskItem child component that accepts the name and completed props
+•	Inside TaskItem, display the task name.
+•	If the task is completed, display a message indicating it is completed (e.g., Completed) or if not
+•	completed, display Not Completed.
+•	Style both components minimally to create a clear and organized display of tasks
+
+
+import React from 'react'
+
+const Child = (props) => {
+  return (
+    <div style={{backgroundColor:"orange"}}>
+        <h1>This is child</h1>
+        <h1>the value of child :{props.value}</h1>
+    </div>
+  )
+}
+
+export default Child
+
+
+
+import React from 'react'
+import Child from "./Child"
+
+const Parent = () => {
+    var data="harivilasam"
+  return (
+    <div>
+        <h1>This is parent</h1>
+        <h1>value of parent :{data}</h1>
+        <Child value={data}/>
+    </div>
+  )
+}
+
+export default Parent
+
+
+
+
+
+ 
+2. You are tasked with building a task management feature for a personal productivity application.
+Implement a parent component named TodoList to handle the tasks and a child component called
+TodoItem that will showcase each task. The TodoItem should receive task information from
+TodoList via props. Feel free to modify the visual style and structure to match the app’s user
+experience goals.
+
+Create a TaskList component as the parent component in React.
+•	Initialize a state variable called tasks, which is an array of task objects. Each task object should have a name (string) and a complete status (boolean).
+•	Inside the TaskList component, map over the tasks array and render a TaskItem component for each task. Pass the name and completed status as props to TaskItem.
+
+Create a TaskItem child component that accepts the name and completed props.
+•	Inside TaskItem, display the task name.
+•	If the task is completed, display a message indicating it is completed (e.g., "Completed") or if
+•	not completed, display Not Completed.
+•	Style both components minimally to create a clear and organized display of tasks.
+
+
+
+import React, { Component } from 'react';
+import TodoItem from './TodoItem'; // Make sure to create TodoItem.js in the same directory
+
+class TodoList extends Component {
+    state = {
+        tasks: [
+            { name: 'Complete React project', completed: false },
+            { name: 'Write documentation', completed: true },
+            { name: 'Test the application', completed: false },
+            { name: 'Deploy to production', completed: true },
+        ]
+    };
+
+    render() {
+        return (
+            <div style={styles.container}>
+                <h1 style={styles.title}>Task List</h1>
+                {this.state.tasks.map((task, index) => (
+                    <TodoItem 
+                        key={index} 
+                        name={task.name} 
+                        completed={task.completed} 
+                    />
+                ))}
+            </div>
+        );
+    }
+}
+
+const styles = {
+    container: {
+        padding: '20px',
+        maxWidth: '600px',
+        margin: '0 auto',
+        backgroundColor: '#f9f9f9',
+        borderRadius: '8px',
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+    },
+    title: {
+        textAlign: 'center',
+        color: '#333',
+    }
+};
+
+export default TodoList;
+
+
+
+
+import React from 'react';
+
+const TodoItem = ({ name, completed }) => {
+    return (
+        <div style={styles.item}>
+            <h3 style={styles.taskName}>{name}</h3>
+            <p style={styles.status}>
+                {completed ? 'Completed' : 'Not Completed'}
+            </p>
+        </div>
+    );
+};
+
+const styles = {
+    item: {
+        padding: '10px',
+        margin: '10px 0',
+        border: '1px solid #ccc',
+        borderRadius: '5px',
+        backgroundColor: '#fff',
+        boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+    },
+    taskName: {
+        margin: 0,
+        color: '#333',
+    },
+    status: {
+        color: completed ? 'green' : 'red',
+    }
+};
+
+export default TodoItem;
+
+
+ 
+3. You are tasked with creating a task management feature within a collaboration platform. Design a
+parent component called WorkTasks that organizes tasks and a child component named
+TaskCard that displays individual tasks. Ensure that TaskCard receives data from WorkTasks
+using props. Customize the appearance and functionality to enhance team collaboration.
+
+Create a TaskList component as the parent component in React.
+•	Initialize a state variable called tasks, which is an array of task objects. Each task object should have a name (string) and a completed status (boolean).
+•	Inside the TaskList component, map over the tasks array and render a TaskItem component for each task. Pass the name and completed status as props to TaskItem.
+
+Create a TaskItem child component that accepts the name and completed props.
+•	Inside TaskItem, display the task name.
+•	If the task is completed, display a message indicating it is completed (e.g., Completed) or if not
+•	completed, display Not Completed.
+•	Style both components minimally to create a clear and organized display of tasks.
+•	import React, { Component } from 'react';
+•	import TaskCard from './TaskCard'; // Make sure to create TaskCard.js in the same directory
+•	
+•	class WorkTasks extends Component {
+•	    state = {
+•	        tasks: [
+•	            { name: 'Design the project layout', completed: false },
+•	            { name: 'Implement authentication', completed: true },
+•	            { name: 'Create API documentation', completed: false },
+•	            { name: 'Conduct code reviews', completed: true },
+•	        ]
+•	    };
+•	
+•	    render() {
+•	        return (
+•	            <div style={styles.container}>
+•	                <h1 style={styles.title}>Team Work Tasks</h1>
+•	                <div style={styles.taskList}>
+•	                    {this.state.tasks.map((task, index) => (
+•	                        <TaskCard 
+•	                            key={index} 
+•	                            name={task.name} 
+•	                            completed={task.completed} 
+•	                        />
+•	                    ))}
+•	                </div>
+•	            </div>
+•	        );
+•	    }
+•	}
+•	
+•	const styles = {
+•	    container: {
+•	        padding: '20px',
+•	        maxWidth: '600px',
+•	        margin: '0 auto',
+•	        backgroundColor: '#f4f4f4',
+•	        borderRadius: '8px',
+•	        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+•	    },
+•	    title: {
+•	        textAlign: 'center',
+•	        color: '#333',
+•	    },
+•	    taskList: {
+•	        marginTop: '20px',
+•	    }
+•	};
+•	
+•	export default WorkTasks;
+
+import React from 'react';
+
+const TaskCard = ({ name, completed }) => {
+    return (
+        <div style={styles.card}>
+            <h3 style={styles.taskName}>{name}</h3>
+            <p style={styles.status}>
+                {completed ? 'Completed' : 'Not Completed'}
+            </p>
+        </div>
+    );
+};
+
+const styles = {
+    card: {
+        padding: '15px',
+        margin: '10px 0',
+        border: '1px solid #ccc',
+        borderRadius: '5px',
+        backgroundColor: '#fff',
+        boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+    },
+    taskName: {
+        margin: 0,
+        color: '#333',
+    },
+    status: {
+        color: '#666',
+    }
+};
+
+export default TaskCard; 
+5. Create material UI Card using React
+
+1. You are tasked with creating a simple application for an e-commerce platform that showcases a list of products using Material-UI cards. Each card should feature essential product information, including the product name, description, price, and image. Customize the layout and design of the cards to align with the branding and user experience goals of the platform.
+
+ Implement Each Component:
+•	Create separate functional components for each of the five tasks above, making sure to import the necessary Material-UI components.
+•	Use inline styles or CSS for basic layout and aesthetics where needed.
+•	 Render in Main Component:
+o	In the main application component (e.g., App.js), render all five components in a structured layout.
+
+// App.js
+import React from 'react';
+import { Card, CardContent, CardMedia, Typography, Button, Container, Grid } from '@mui/material';
+
+const App = () => {
+  return (
+    <Container>
+      <Typography variant="h4" align="center" gutterBottom>
+        E-Commerce Product Showcase
+      </Typography>
+      <Grid container spacing={2}>
+        {/* Product 1 */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Card sx={{ maxWidth: 250, margin: '16px' }}>
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/150"
+              alt="Product 1"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h6" component="div">
+                Product 1
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                This is a description for product 1.
+              </Typography>
+              <Typography variant="h6" color="primary">
+                $29.99
+              </Typography>
+              <Button variant="contained" color="primary" fullWidth>
+                Add to Cart
+              </Button>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        {/* Product 2 */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Card sx={{ maxWidth: 250, margin: '16px' }}>
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/150"
+              alt="Product 2"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h6" component="div">
+                Product 2
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                This is a description for product 2.
+              </Typography>
+              <Typography variant="h6" color="primary">
+                $49.99
+              </Typography>
+              <Button variant="contained" color="primary" fullWidth>
+                Add to Cart
+              </Button>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        {/* Product 3 */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Card sx={{ maxWidth: 250, margin: '16px' }}>
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/150"
+              alt="Product 3"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h6" component="div">
+                Product 3
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                This is a description for product 3.
+              </Typography>
+              <Typography variant="h6" color="primary">
+                $19.99
+              </Typography>
+              <Button variant="contained" color="primary" fullWidth>
+                Add to Cart
+              </Button>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    </Container>
+  );
+};
+
+export default App;
+
+
+
+2. You are tasked with building a straightforward application for an online marketplace that displays a collection of products in Material-UI cards. Each card should present details such as the product name, description, price, and an accompanying image. Tailor the design and content to enhance the marketplace's appeal and usability.
+
+ 
+Implement Each Component:
+•	Create separate functional components for each of the five tasks above, making sure to import the necessary Material-UI components.
+•	Use inline styles or CSS for basic layout and aesthetics where needed.
+
+Render in Main Component:
+•	In the main application component (e.g., App.js), render all five components in a structured layout.
+
+
+
+// App.js
+import React from 'react';
+import { Container, Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
+
+const App = () => {
+    // Sample product data
+    const products = [
+        {
+            name: 'Product 1',
+            description: 'Description for Product 1',
+            price: 29.99,
+            image: 'https://via.placeholder.com/150',
+        },
+        {
+            name: 'Product 2',
+            description: 'Description for Product 2',
+            price: 39.99,
+            image: 'https://via.placeholder.com/150',
+        },
+        {
+            name: 'Product 3',
+            description: 'Description for Product 3',
+            price: 49.99,
+            image: 'https://via.placeholder.com/150',
+        },
+        {
+            name: 'Product 4',
+            description: 'Description for Product 4',
+            price: 19.99,
+            image: 'https://via.placeholder.com/150',
+        },
+        {
+            name: 'Product 5',
+            description: 'Description for Product 5',
+            price: 59.99,
+            image: 'https://via.placeholder.com/150',
+        },
+    ];
+
+    return (
+        <Container>
+            <Typography variant="h4" align="center" gutterBottom>
+                Online Marketplace
+            </Typography>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+                {products.map((product, index) => (
+                    <Card key={index} sx={{ maxWidth: 250, margin: '16px' }}>
+                        <CardMedia
+                            component="img"
+                            height="140"
+                            image={product.image}
+                            alt={product.name}
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h6" component="div">
+                                {product.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {product.description}
+                            </Typography>
+                            <Typography variant="h6" color="primary">
+                                ${product.price}
+                            </Typography>
+                            <Button variant="contained" color="primary" fullWidth>
+                                Add to Cart
+                            </Button>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+        </Container>
+    );
+};
+
+export default App;
+
+
+ 
+3. You are tasked with developing a simple application to serve as a product catalog for a retail business. This application should utilize Material-UI cards to display a list of products, including the product name, description, price, and image on each card. Customize the card styles and information layout to reflect the retail brand's identity.
+
+
+Implement Each Component:
+•	Create separate functional components for each of the five tasks above, making sure to import the necessary Material-UI components.
+•	Use inline styles or CSS for basic layout and aesthetics where needed.
+
+Render in Main Component:
+•	In the main application component (e.g., App.js), render all five components in a structured layout.
+
+
+
+
+// App.js
+import React from 'react';
+import { Container, Typography, Card, CardContent, CardMedia, Button } from '@mui/material';
+
+const App = () => {
+    return (
+        <Container>
+            <Typography variant="h4" align="center" gutterBottom>
+                Product Catalog
+            </Typography>
+
+            {/* Product 1 */}
+            <Card sx={{ maxWidth: 300, margin: '16px', width: '100%' }}>
+                <CardMedia
+                    component="img"
+                    height="140"
+                    image="https://via.placeholder.com/150"
+                    alt="Product 1"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h6" component="div">
+                        Product 1
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        This is the description for Product 1.
+                    </Typography>
+                    <Typography variant="h6" color="primary">
+                        $29.99
+                    </Typography>
+                    <Button variant="contained" color="primary" fullWidth>
+                        Add to Cart
+                    </Button>
+                </CardContent>
+            </Card>
+
+            {/* Product 2 */}
+            <Card sx={{ maxWidth: 300, margin: '16px', width: '100%' }}>
+                <CardMedia
+                    component="img"
+                    height="140"
+                    image="https://via.placeholder.com/150"
+                    alt="Product 2"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h6" component="div">
+                        Product 2
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        This is the description for Product 2.
+                    </Typography>
+                    <Typography variant="h6" color="primary">
+                        $39.99
+                    </Typography>
+                    <Button variant="contained" color="primary" fullWidth>
+                        Add to Cart
+                    </Button>
+                </CardContent>
+            </Card>
+
+            {/* Product 3 */}
+            <Card sx={{ maxWidth: 300, margin: '16px', width: '100%' }}>
+                <CardMedia
+                    component="img"
+                    height="140"
+                    image="https://via.placeholder.com/150"
+                    alt="Product 3"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h6" component="div">
+                        Product 3
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        This is the description for Product 3.
+                    </Typography>
+                    <Typography variant="h6" color="primary">
+                        $49.99
+                    </Typography>
+                    <Button variant="contained" color="primary" fullWidth>
+                        Add to Cart
+                    </Button>
+                </CardContent>
+            </Card>
+
+            {/* Product 4 */}
+            <Card sx={{ maxWidth: 300, margin: '16px', width: '100%' }}>
+                <CardMedia
+                    component="img"
+                    height="140"
+                    image="https://via.placeholder.com/150"
+                    alt="Product 4"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h6" component="div">
+                        Product 4
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        This is the description for Product 4.
+                    </Typography>
+                    <Typography variant="h6" color="primary">
+                        $19.99
+                    </Typography>
+                    <Button variant="contained" color="primary" fullWidth>
+                        Add to Cart
+                    </Button>
+                </CardContent>
+            </Card>
+
+            {/* Product 5 */}
+            <Card sx={{ maxWidth: 300, margin: '16px', width: '100%' }}>
+                <CardMedia
+                    component="img"
+                    height="140"
+                    image="https://via.placeholder.com/150"
+                    alt="Product 5"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h6" component="div">
+                        Product 5
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        This is the description for Product 5.
+                    </Typography>
+                    <Typography variant="h6" color="primary">
+                        $59.99
+                    </Typography>
+                    <Button variant="contained" color="primary" fullWidth>
+                        Add to Cart
+                    </Button>
+                </CardContent>
+            </Card>
+        </Container>
+    );
+};
+
+export default App;
+
+
+ 
+
+6. Implementation of FORM validation in React
+
+Question 1:
+
+Suppose you are developing a web application for a local event registration. Users must fill out a form with fields for their name, email, and phone number. The form requires validations:
+
+
+The name should only contain letters and have a minimum of 3 characters. The email should be in standard format (e.g., example@example.com).
+The phone number should have exactly 10 digits.
+
+Design and implement a React form component that validates each of these fields. Display error messages under each field if the input is invalid, and ensure the form cannot be submitted until all validations are met.
+
+import React, { useState } from 'react';
+
+const EventRegistrationForm = () => {
+    const nameRegex = /^[A-Za-z]+$/; // Only letters
+    const emailRegex = /^\S+@\S+\.\S+$/; // Email format
+    const phoneRegex = /^\d{10}$/; // Exactly 10 digits
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [nameError, setNameError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [phoneError, setPhoneError] = useState(false);
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+        if (e.target.value.length < 3 || !nameRegex.test(e.target.value)) {
+            setNameError(true);
+        } else {
+            setNameError(false);
+        }
+    };
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+        if (!emailRegex.test(e.target.value)) {
+            setEmailError(true);
+        } else {
+            setEmailError(false);
+        }
+    };
+
+    const handlePhoneChange = (e) => {
+        setPhone(e.target.value);
+        if (!phoneRegex.test(e.target.value)) {
+            setPhoneError(true);
+        } else {
+            setPhoneError(false);
+        }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!nameError && !emailError && !phoneError) {
+            alert("Form submitted successfully!");
+            // Reset form fields
+            setName('');
+            setEmail('');
+            setPhone('');
+        } else {
+            alert("Please correct the errors before submitting.");
+        }
+    };
+
+    return (
+        <div>
+            <h2>Event Registration Form</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" value={name} onChange={handleNameChange} />
+                    {nameError && <p style={{ color: "red" }}>Name must be at least 3 characters and contain only letters.</p>}
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" value={email} onChange={handleEmailChange} />
+                    {emailError && <p style={{ color: "red" }}>Invalid email format.</p>}
+                </div>
+                <div>
+                    <label>Phone Number:</label>
+                    <input type="text" value={phone} onChange={handlePhoneChange} />
+                    {phoneError && <p style={{ color: "red" }}>Phone number must be exactly 10 digits.</p>}
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    );
+};
+
+export default EventRegistrationForm;
+
+
+ 
+Question 2:
+
+You’re working on a job application form for a company website, and each field requires specific validation to ensure accurate data:
+
+Name: only letters, minimum length of 3. Email: valid email format.
+Experience: positive number between 0 and 30.
+
+Build a React form component to validate each input field based on the requirements. Add custom error messages for each input field when validations fail, and disable the submit button until all fields are correctly validated.
+
+
+ 
+import React, { useState } from 'react';
+
+const JobApplicationForm = () => {
+    const nameRegex = /^[A-Za-z]+$/; // Only letters
+    const emailRegex = /^\S+@\S+\.\S+$/; // Email format
+    const experienceRegex = /^(?:[1-9]|[1-2][0-9]|30)$/; // 0-30
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [experience, setExperience] = useState('');
+    const [nameError, setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [experienceError, setExperienceError] = useState('');
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+        if (e.target.value.length < 3 || !nameRegex.test(e.target.value)) {
+            setNameError("Name must be at least 3 letters long and contain only letters.");
+        } else {
+            setNameError('');
+        }
+    };
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+        if (!emailRegex.test(e.target.value)) {
+            setEmailError("Please enter a valid email address.");
+        } else {
+            setEmailError('');
+        }
+    };
+
+    const handleExperienceChange = (e) => {
+        setExperience(e.target.value);
+        if (!experienceRegex.test(e.target.value)) {
+            setExperienceError("Experience must be a positive number between 0 and 30.");
+        } else {
+            setExperienceError('');
+        }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert("Form submitted successfully!");
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setExperience('');
+    };
+
+    const isFormValid = () => {
+        return !nameError && !emailError && !experienceError && name && email && experience;
+    };
+
+    return (
+        <div>
+            <h2>Job Application Form</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" value={name} onChange={handleNameChange} />
+                    {nameError && <p style={{ color: "red" }}>{nameError}</p>}
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" value={email} onChange={handleEmailChange} />
+                    {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+                </div>
+                <div>
+                    <label>Experience (0-30 years):</label>
+                    <input type="number" value={experience} onChange={handleExperienceChange} />
+                    {experienceError && <p style={{ color: "red" }}>{experienceError}</p>}
+                </div>
+                <button type="submit" disabled={!isFormValid()}>Submit</button>
+            </form>
+        </div>
+    );
+};
+
+export default JobApplicationForm;
+
+
+
+Question 3:
+
+A user registration form has 3 input fields—Username, Password, and Age—and the following conditions must be met:
+
+The username should contain only lowercase letters, with a length of exactly 5.
+The password should include at least one uppercase letter, one number, and be 8 characters long.
+The age should be an integer between 20 and 40.
+Implement a React form component to validate each of these conditions and display specific hints for each field if it doesn’t meet the criteria.
+
+
+ 
+import React, { useState } from 'react';
+
+const RegistrationForm = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [age, setAge] = useState('');
+    const [usernameError, setUsernameError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [ageError, setAgeError] = useState('');
+
+    const validateUsername = (value) => {
+        const regex = /^[a-z]{5}$/; // Only lowercase letters, exactly 5 characters
+        if (!regex.test(value)) {
+            setUsernameError("Username must be exactly 5 lowercase letters.");
+        } else {
+            setUsernameError('');
+        }
+    };
+
+    const validatePassword = (value) => {
+        const regex = /^(?=.*[A-Z])(?=.*\d).{8,}$/; // At least one uppercase letter, one number, 8 characters long
+        if (!regex.test(value)) {
+            setPasswordError("Password must be at least 8 characters long and contain at least one uppercase letter and one number.");
+        } else {
+            setPasswordError('');
+        }
+    };
+
+    const validateAge = (value) => {
+        const ageNum = parseInt(value, 10);
+        if (isNaN(ageNum) || ageNum < 20 || ageNum > 40) {
+            setAgeError("Age must be an integer between 20 and 40.");
+        } else {
+            setAgeError('');
+        }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!usernameError && !passwordError && !ageError && username && password && age) {
+            alert("Registration successful!");
+            // Reset form fields
+            setUsername('');
+            setPassword('');
+            setAge('');
+        } else {
+            alert("Please correct the errors before submitting.");
+        }
+    };
+
+    return (
+        <div>
+            <h2>User Registration Form</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Username:</label>
+                    <input
+                        type="text"
+                        value={username}
+                        onChange={(e) => {
+                            setUsername(e.target.value);
+                            validateUsername(e.target.value);
+                        }}
+                    />
+                    {usernameError && <p style={{ color: "red" }}>{usernameError}</p>}
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => {
+                            setPassword(e.target.value);
+                            validatePassword(e.target.value);
+                        }}
+                    />
+                    {passwordError && <p style={{ color: "red" }}>{passwordError}</p>}
+                </div>
+                <div>
+                    <label>Age:</label>
+                    <input
+                        type="number"
+                        value={age}
+                        onChange={(e) => {
+                            setAge(e.target.value);
+                            validateAge(e.target.value);
+                        }}
+                    />
+                    {ageError && <p style={{ color: "red" }}>{ageError}</p>}
+                </div>
+                <button type="submit" disabled={!!(usernameError || passwordError || ageError)}>Submit</button>
+            </form>
+        </div>
+    );
+};
+
+export default RegistrationForm;
+7. Implementation of Routing in React
+
+Question 1:
+
+Suppose you are developing a web application for a local event registration. Users must fill out a form with fields for their name, email, and phone number. The form requires validations:
+
+The name should only contain letters and have a minimum of 3 characters. The email should be in standard format (e.g., example@example.com).
+The phone number should have exactly 10 digits.
+
+Design and implement a React form component that validates each of these fields. Display error messages under each field if the input is invalid, and ensure the form cannot be submitted until all validations are met.
+
+
+import React, { useState } from 'react';
+
+const EventRegistrationForm = () => {
+  // State to hold input values and error messages
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [errors, setErrors] = useState({});
+
+  // Validation function
+  const validate = () => {
+    const newErrors = {};
+
+    // Name validation
+    if (!/^[a-zA-Z]{3,}$/.test(name)) {
+      newErrors.name = 'Name must be at least 3 characters long and contain only letters.';
+    }
+
+    // Email validation
+    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+
+    // Phone validation
+    if (!/^\d{10}$/.test(phone)) {
+      newErrors.phone = 'Phone number must be exactly 10 digits.';
+    }
+
+    setErrors(newErrors);
+
+    // Return true if there are no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert('Form submitted successfully!');
+      // You can add form submission logic here (e.g., sending data to an API)
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <h2>Event Registration</h2>
+      <form onSubmit={handleSubmit}>
+        {/* Name Field */}
+        <div style={styles.fieldContainer}>
+          <label>Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            style={styles.input}
+          />
+          {errors.name && <span style={styles.error}>{errors.name}</span>}
+        </div>
+
+        {/* Email Field */}
+        <div style={styles.fieldContainer}>
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={styles.input}
+          />
+          {errors.email && <span style={styles.error}>{errors.email}</span>}
+        </div>
+
+        {/* Phone Field */}
+        <div style={styles.fieldContainer}>
+          <label>Phone Number:</label>
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            style={styles.input}
+          />
+          {errors.phone && <span style={styles.error}>{errors.phone}</span>}
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" style={styles.submitButton}>
+          Register
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    maxWidth: '400px',
+    margin: 'auto',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+  },
+  fieldContainer: {
+    marginBottom: '15px',
+  },
+  input: {
+    width: '100%',
+    padding: '8px',
+    margin: '5px 0',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+  },
+  error: {
+    color: 'red',
+    fontSize: '0.8em',
+  },
+  submitButton: {
+    padding: '10px 20px',
+    backgroundColor: '#007BFF',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+};
+
+export default EventRegistrationForm;
+ 
+Question 2:
+
+You’re working on a job application form for a company website, and each field requires specific validation to ensure accurate data:
+Name: only letters, minimum length of 3. Email: valid email format.
+Experience: positive number between 0 and 30.
+
+Build a React form component to validate each input field based on the requirements. Add custom error messages for each input field when validations fail, and disable the submit button until all fields are correctly validated.
+
+
+
+import React, { useState } from 'react';
+
+const JobApplicationForm = () => {
+  // State to hold input values and error messages
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [experience, setExperience] = useState('');
+  const [errors, setErrors] = useState({});
+
+  // Validation function
+  const validate = () => {
+    const newErrors = {};
+
+    // Name validation: Only letters, minimum 3 characters
+    if (!/^[a-zA-Z]{3,}$/.test(name)) {
+      newErrors.name = 'Name must be at least 3 characters long and contain only letters.';
+    }
+
+    // Email validation: Valid email format
+    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+
+    // Experience validation: Positive number between 0 and 30
+    if (!/^\d+$/.test(experience) || experience < 0 || experience > 30) {
+      newErrors.experience = 'Experience must be a positive number between 0 and 30.';
+    }
+
+    setErrors(newErrors);
+
+    // Return true if there are no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert('Application submitted successfully!');
+      // You can add form submission logic here (e.g., sending data to an API)
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <h2>Job Application</h2>
+      <form onSubmit={handleSubmit}>
+        {/* Name Field */}
+        <div style={styles.fieldContainer}>
+          <label>Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            style={styles.input}
+          />
+          {errors.name && <span style={styles.error}>{errors.name}</span>}
+        </div>
+
+        {/* Email Field */}
+        <div style={styles.fieldContainer}>
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={styles.input}
+          />
+          {errors.email && <span style={styles.error}>{errors.email}</span>}
+        </div>
+
+        {/* Experience Field */}
+        <div style={styles.fieldContainer}>
+          <label>Experience (years):</label>
+          <input
+            type="number"
+            value={experience}
+            onChange={(e) => setExperience(e.target.value)}
+            style={styles.input}
+          />
+          {errors.experience && <span style={styles.error}>{errors.experience}</span>}
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" style={styles.submitButton} disabled={Object.keys(errors).length > 0}>
+          Submit Application
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    maxWidth: '400px',
+    margin: 'auto',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+  },
+  fieldContainer: {
+    marginBottom: '15px',
+  },
+  input: {
+    width: '100%',
+    padding: '8px',
+    margin: '5px 0',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+  },
+  error: {
+    color: 'red',
+    fontSize: '0.8em',
+  },
+  submitButton: {
+    padding: '10px 20px',
+    backgroundColor: '#007BFF',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+};
+
+export default JobApplicationForm; 
+Question 3:
+
+A user registration form has 3 input fields—Username, Password, and Age—and the following conditions must be met:
+
+The username should contain only lowercase letters, with a length of exactly 5.
+The password should include at least one uppercase letter, one number, and be 8 characters long.
+The age should be an integer between 20 and 40.
+Implement a React form component to validate each of these conditions and display specific hints for each field if it doesn’t meet the criteria.
+
+
+
+
+
+import React, { useState } from 'react';
+
+const UserRegistrationForm = () => {
+  // State variables for the form fields and error messages
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [age, setAge] = useState('');
+  const [errors, setErrors] = useState({});
+
+  // Validation function
+  const validate = () => {
+    const newErrors = {};
+
+    // Username validation: exactly 5 lowercase letters
+    if (!/^[a-z]{5}$/.test(username)) {
+      newErrors.username = 'Username must be exactly 5 lowercase letters.';
+    }
+
+    // Password validation: at least one uppercase, one number, and 8 characters long
+    if (!/(?=.*[A-Z])(?=.*\d).{8,}/.test(password)) {
+      newErrors.password = 'Password must be at least 8 characters long, with at least one uppercase letter and one number.';
+    }
+
+    // Age validation: between 20 and 40
+    if (!/^\d+$/.test(age) || age < 20 || age > 40) {
+      newErrors.age = 'Age must be a number between 20 and 40.';
+    }
+
+    setErrors(newErrors);
+
+    // Return true if there are no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert('Registration successful!');
+      // You can add form submission logic here (e.g., send data to an API)
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <h2>User Registration</h2>
+      <form onSubmit={handleSubmit}>
+        {/* Username Field */}
+        <div style={styles.fieldContainer}>
+          <label>Username:</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            style={styles.input}
+          />
+          {errors.username && <span style={styles.error}>{errors.username}</span>}
+          {!errors.username && username && (
+            <span style={styles.hint}>Must be 5 lowercase letters.</span>
+          )}
+        </div>
+
+        {/* Password Field */}
+        <div style={styles.fieldContainer}>
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            style={styles.input}
+          />
+          {errors.password && <span style={styles.error}>{errors.password}</span>}
+          {!errors.password && password && (
+            <span style={styles.hint}>Must be at least 8 characters, with one uppercase and one number.</span>
+          )}
+        </div>
+
+        {/* Age Field */}
+        <div style={styles.fieldContainer}>
+          <label>Age:</label>
+          <input
+            type="number"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            style={styles.input}
+          />
+          {errors.age && <span style={styles.error}>{errors.age}</span>}
+          {!errors.age && age && (
+            <span style={styles.hint}>Age must be between 20 and 40.</span>
+          )}
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" style={styles.submitButton} disabled={Object.keys(errors).length > 0}>
+          Register
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    maxWidth: '400px',
+    margin: 'auto',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+  },
+  fieldContainer: {
+    marginBottom: '15px',
+  },
+  input: {
+    width: '100%',
+    padding: '8px',
+    margin: '5px 0',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+  },
+  error: {
+    color: 'red',
+    fontSize: '0.8em',
+  },
+  hint: {
+    color: 'gray',
+    fontSize: '0.8em',
+  },
+  submitButton: {
+    padding: '10px 20px',
+    backgroundColor: '#28a745',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+};
+
+export default UserRegistrationForm; 
+8. Implementation of a Dropdown component using React
+
+Question 1:
+
+Suppose you are developing a web application for a local event registration. Users must fill out a form with fields for their name, email, and phone number. The form requires validations:
+
+The name should only contain letters and have a minimum of 3 characters. The email should be in standard format (e.g., example@example.com).
+The phone number should have exactly 10 digits.
+
+Design and implement a React form component that validates each of these fields. Display error messages under each field if the input is invalid, and ensure the form cannot be submitted until all validations are met.
+
+
+
+
+import React, { useState } from 'react';
+
+const EventRegistrationForm = () => {
+  // State variables for the form fields and error messages
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [errors, setErrors] = useState({});
+
+  // Validation function
+  const validate = () => {
+    const newErrors = {};
+
+    // Name validation: must only contain letters and be at least 3 characters long
+    if (!/^[A-Za-z]{3,}$/.test(name)) {
+      newErrors.name = 'Name must contain only letters and be at least 3 characters long.';
+    }
+
+    // Email validation: must be in a valid email format
+    if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+
+    // Phone number validation: must be exactly 10 digits
+    if (!/^\d{10}$/.test(phone)) {
+      newErrors.phone = 'Phone number must be exactly 10 digits.';
+    }
+
+    setErrors(newErrors);
+
+    // Return true if no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert('Registration successful!');
+      // You can add further logic here, e.g., send the data to an API
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <h2>Event Registration</h2>
+      <form onSubmit={handleSubmit}>
+        {/* Name Field */}
+        <div style={styles.fieldContainer}>
+          <label>Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            style={styles.input}
+          />
+          {errors.name && <span style={styles.error}>{errors.name}</span>}
+        </div>
+
+        {/* Email Field */}
+        <div style={styles.fieldContainer}>
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={styles.input}
+          />
+          {errors.email && <span style={styles.error}>{errors.email}</span>}
+        </div>
+
+        {/* Phone Field */}
+        <div style={styles.fieldContainer}>
+          <label>Phone Number:</label>
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            style={styles.input}
+          />
+          {errors.phone && <span style={styles.error}>{errors.phone}</span>}
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" style={styles.submitButton} disabled={Object.keys(errors).length > 0}>
+          Register
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    maxWidth: '400px',
+    margin: 'auto',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+  },
+  fieldContainer: {
+    marginBottom: '15px',
+  },
+  input: {
+    width: '100%',
+    padding: '8px',
+    margin: '5px 0',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+  },
+  error: {
+    color: 'red',
+    fontSize: '0.8em',
+  },
+  submitButton: {
+    padding: '10px 20px',
+    backgroundColor: '#28a745',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+};
+
+export default EventRegistrationForm;
+ 
+Question 2:
+
+You’re working on a job application form for a company website, and each field requires specific validation to ensure accurate data:
+
+Name: only letters, minimum length of 3. Email: valid email format.
+Experience: positive number between 0 and 30.
+
+Build a React form component to validate each input field based on the requirements. Add custom error messages for each input field when validations fail, and disable the submit button until all fields are correctly validated.
+
+
+
+import React, { useState } from 'react';
+
+const JobApplicationForm = () => {
+  // State variables for form inputs and error messages
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [experience, setExperience] = useState('');
+  const [errors, setErrors] = useState({});
+
+  // Validation function
+  const validate = () => {
+    const newErrors = {};
+
+    // Name validation: must contain only letters and have at least 3 characters
+    if (!/^[A-Za-z]{3,}$/.test(name)) {
+      newErrors.name = 'Name must contain only letters and be at least 3 characters long.';
+    }
+
+    // Email validation: must be in a valid email format
+    if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+
+    // Experience validation: must be a positive number between 0 and 30
+    if (!/^\d+$/.test(experience) || experience < 0 || experience > 30) {
+      newErrors.experience = 'Experience must be a positive number between 0 and 30.';
+    }
+
+    setErrors(newErrors);
+
+    // Return true if no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert('Application submitted successfully!');
+      // You can add further logic here to send data to the backend.
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <h2>Job Application Form</h2>
+      <form onSubmit={handleSubmit}>
+        {/* Name Field */}
+        <div style={styles.fieldContainer}>
+          <label>Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            style={styles.input}
+          />
+          {errors.name && <span style={styles.error}>{errors.name}</span>}
+        </div>
+
+        {/* Email Field */}
+        <div style={styles.fieldContainer}>
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={styles.input}
+          />
+          {errors.email && <span style={styles.error}>{errors.email}</span>}
+        </div>
+
+        {/* Experience Field */}
+        <div style={styles.fieldContainer}>
+          <label>Experience (years):</label>
+          <input
+            type="number"
+            value={experience}
+            onChange={(e) => setExperience(e.target.value)}
+            style={styles.input}
+          />
+          {errors.experience && <span style={styles.error}>{errors.experience}</span>}
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" style={styles.submitButton} disabled={Object.keys(errors).length > 0}>
+          Submit Application
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    maxWidth: '400px',
+    margin: 'auto',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+  },
+  fieldContainer: {
+    marginBottom: '15px',
+  },
+  input: {
+    width: '100%',
+    padding: '8px',
+    margin: '5px 0',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+  },
+  error: {
+    color: 'red',
+    fontSize: '0.8em',
+  },
+  submitButton: {
+    padding: '10px 20px',
+    backgroundColor: '#28a745',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+};
+
+export default JobApplicationForm;
+
+ 
+Question 3:
+
+A user registration form has 3 input fields—Username, Password, and Age—and the following conditions must be met:
+
+The username should contain only lowercase letters, with a length of exactly 5.
+The password should include at least one uppercase letter, one number, and be 8 characters long.
+The age should be an integer between 20 and 40.
+Implement a React form component to validate each of these conditions and display specific hints for each field if it doesn’t meet the criteria.
+
+
+import React, { useState } from 'react';
+
+const RegistrationForm = () => {
+  // State variables for form fields and validation errors
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [age, setAge] = useState('');
+  const [errors, setErrors] = useState({});
+
+  // Validation function
+  const validate = () => {
+    const newErrors = {};
+
+    // Username validation: only lowercase letters and exactly 5 characters
+    if (!/^[a-z]{5}$/.test(username)) {
+      newErrors.username = 'Username must be exactly 5 lowercase letters.';
+    }
+
+    // Password validation: at least one uppercase letter, one number, and 8 characters long
+    if (!/(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}/.test(password)) {
+      newErrors.password = 'Password must be at least 8 characters, contain one uppercase letter and one number.';
+    }
+
+    // Age validation: an integer between 20 and 40
+    if (!/^\d+$/.test(age) || age < 20 || age > 40) {
+      newErrors.age = 'Age must be an integer between 20 and 40.';
+    }
+
+    setErrors(newErrors);
+
+    // Return true if no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert('Registration successful!');
+      // You can add further logic here to handle registration (e.g., send data to a backend)
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <h2>User Registration Form</h2>
+      <form onSubmit={handleSubmit}>
+        {/* Username Field */}
+        <div style={styles.fieldContainer}>
+          <label>Username:</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            style={styles.input}
+          />
+          {errors.username && <span style={styles.error}>{errors.username}</span>}
+        </div>
+
+        {/* Password Field */}
+        <div style={styles.fieldContainer}>
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            style={styles.input}
+          />
+          {errors.password && <span style={styles.error}>{errors.password}</span>}
+        </div>
+
+        {/* Age Field */}
+        <div style={styles.fieldContainer}>
+          <label>Age:</label>
+          <input
+            type="number"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            style={styles.input}
+          />
+          {errors.age && <span style={styles.error}>{errors.age}</span>}
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" style={styles.submitButton} disabled={Object.keys(errors).length > 0}>
+          Submit Registration
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    maxWidth: '400px',
+    margin: 'auto',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+  },
+  fieldContainer: {
+    marginBottom: '15px',
+  },
+  input: {
+    width: '100%',
+    padding: '8px',
+    margin: '5px 0',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+  },
+  error: {
+    color: 'red',
+    fontSize: '0.8em',
+  },
+  submitButton: {
+    padding: '10px 20px',
+    backgroundColor: '#28a745',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+};
+
+export default RegistrationForm;
+ 
+9. Implementation of React component to handle HTTP requests
+
+Question 1:
+You’re developing a contact management application to view and add new contacts. The app needs to retrieve and display a list of contacts and allow users to add a new contact by entering their name and clicking a button.
+Implement a React component that performs the following tasks:
+  Sends a GET request to https://jsonplaceholder.typicode.com/users when the component mounts to fetch and display a list of contact names. Provides an input field to add a new contact name. When the "Post" button is clicked, a POST request should be sent to add the contact, updating the displayed list.
+ 
+import axios from 'axios';
+import React, { useState } from 'react';
+
+const ContactManager = () => {
+    const [contacts, setContacts] = useState([]);
+    const [error, setError] = useState('');
+    const [newContact, setNewContact] = useState('');
+
+    // Fetch contacts from API
+    const handleGetContacts = () => {
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then((res) => {
+                console.log("Fetched contacts:", res.data);
+                setContacts(res.data); // Set fetched contacts to state
+            })
+            .catch((err) => {
+                console.log("Error fetching contacts:", err);
+                setError('Failed to fetch contacts.'); // Set error state
+            });
+    };
+
+    // Handle adding a new contact
+    const handleAddContact = () => {
+        if (!newContact) {
+            setError('Please enter a contact name.');
+            return;
+        }
+
+        const contactData = {
+            name: newContact
+        };
+
+        axios.post('https://jsonplaceholder.typicode.com/users', contactData)
+            .then((res) => {
+                console.log("Added contact:", res.data);
+                setContacts([...contacts, res.data]); // Update contacts state with new contact
+                setNewContact(''); // Clear input
+                setError(''); // Clear error
+            })
+            .catch((err) => {
+                console.log("Error adding contact:", err);
+                setError('Failed to add new contact.'); // Set error state
+            });
+    };
+
+    return (
+        <div>
+            <h1>Contact Manager</h1>
+            <button onClick={handleGetContacts}>Fetch Contacts</button>
+            <div>
+                <input
+                    type="text"
+                    placeholder="Enter new contact name"
+                    value={newContact}
+                    onChange={(e) => setNewContact(e.target.value)}
+                />
+                <button onClick={handleAddContact}>Add Contact</button>
+            </div>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <ul>
+                {contacts.map((contact) => (
+                    <li key={contact.id}>{contact.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+export default ContactManager;
+
+
+
+
+
+
+Question 2:
+In an employee management system, users should be able to update or delete specific employee names in the displayed list. The application must:
+
+•	Provide an input field where users can type the name to update or delete.
+•	Use a Put button to send a PUT request that updates the employee’s name in the database. 
+•	Use a Delete button to remove an employee’s name from the list.
+
+Create a React component that includes:
+•	A PUT request triggered by clicking the Put button to update an employee’s name entered in the input field.
+•	A DELETE request to delete an employee when the Delete button is clicked. Log Successfully deleted on successful deletion.
+ 
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+
+const EmployeeManagement = () => {
+    const [employees, setEmployees] = useState([]);
+    const [employeeName, setEmployeeName] = useState('');
+    const [employeeId, setEmployeeId] = useState('');
+
+    // Fetch employees from the API
+    const handleGetEmployees = () => {
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(res => {
+                console.log("Fetched employees:", res.data);
+                setEmployees(res.data);
+            })
+            .catch(err => {
+                console.log("Error fetching employees:", err);
+            });
+    };
+
+    // Handle update employee
+    const handleUpdateEmployee = () => {
+        const updatedData = { name: employeeName };
+
+        axios.put(`https://jsonplaceholder.typicode.com/users/${employeeId}`, updatedData)
+            .then(res => {
+                console.log("Updated employee:", res.data);
+                setEmployees(prev => prev.map(emp => emp.id === parseInt(employeeId) ? { ...emp, name: employeeName } : emp));
+                setEmployeeName('');
+                setEmployeeId('');
+            })
+            .catch(err => {
+                console.log("Error updating employee:", err);
+            });
+    };
+
+    // Handle delete employee
+    const handleDeleteEmployee = () => {
+        axios.delete(`https://jsonplaceholder.typicode.com/users/${employeeId}`)
+            .then(() => {
+                console.log("Successfully deleted");
+                setEmployees(prev => prev.filter(emp => emp.id !== parseInt(employeeId)));
+                setEmployeeId('');
+            })
+            .catch(err => {
+                console.log("Error deleting employee:", err);
+            });
+    };
+
+    return (
+        <div>
+            <h1>Employee Management</h1>
+            <button onClick={handleGetEmployees}>Fetch Employees</button>
+            <div>
+                <input
+                    type="text"
+                    placeholder="Enter Employee ID"
+                    value={employeeId}
+                    onChange={(e) => setEmployeeId(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Enter New Employee Name"
+                    value={employeeName}
+                    onChange={(e) => setEmployeeName(e.target.value)}
+                />
+                <button onClick={handleUpdateEmployee}>Put</button>
+                <button onClick={handleDeleteEmployee}>Delete</button>
+            </div>
+            <ul>
+                {employees.map((employee) => (
+                    <li key={employee.id}>{employee.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+export default EmployeeManagement;
+
+
+
+
+
+
+
+
+Question 3:
+You’re building a to-do list app where users can view and update the names of existing tasks. The component should:
+•	Display a list of all tasks when the component mounts.
+•	Allow the user to update a task’s name by typing a new name in an input field and clicking a "Put" button.
+
+Implement a React component that sends:
+•	A GET request to https://jsonplaceholder.typicode.com/users on mount to fetch and display all task names.
+•	A PUT request to update a task’s name when the Put button is clicked. Ensure the updated name is reflected in the displayed list of tasks.
+
+ 
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+
+const ToDoList = () => {
+    const [tasks, setTasks] = useState([]);
+    const [taskName, setTaskName] = useState('');
+    const [taskId, setTaskId] = useState('');
+
+    const handleGet = () => {
+        axios.get("https://jsonplaceholder.typicode.com/users")
+            .then(res => {
+                const fetchedTasks = res.data.map(user => ({ id: user.id, name: user.name }));
+                setTasks(fetchedTasks);
+                console.log("Fetched tasks: ", fetchedTasks);
+            })
+            .catch(err => {
+                console.log("Error fetching tasks: ", err);
+            });
+    };
+
+    const handleUpdateTask = () => {
+        if (!taskId || !taskName) {
+            alert("Please enter both Task ID and new Task Name");
+            return;
+        }
+
+        const updatedTask = { name: taskName };
+        axios.put(`https://jsonplaceholder.typicode.com/users/${taskId}`, updatedTask)
+            .then(res => {
+                console.log("Updated task: ", res.data);
+                setTasks(prevTasks =>
+                    prevTasks.map(task => (task.id === parseInt(taskId) ? { ...task, name: taskName } : task))
+                );
+                setTaskName('');
+                setTaskId('');
+            })
+            .catch(err => {
+                console.log("Error updating task: ", err);
+            });
+    };
+
+    useEffect(() => {
+        handleGet(); // Fetch tasks on component mount
+    }, []);
+
+    return (
+        <div>
+            <h1>To-Do List</h1>
+            <div>
+                <input
+                    type="text"
+                    placeholder="Enter Task ID"
+                    value={taskId}
+                    onChange={(e) => setTaskId(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Enter New Task Name"
+                    value={taskName}
+                    onChange={(e) => setTaskName(e.target.value)}
+                />
+                <button onClick={handleUpdateTask}>Put</button>
+            </div>
+            <ul>
+                {tasks.map((task) => (
+                    <li key={task.id}>{task.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+export default ToDoList;
+
+
+
+
+
+
+
+
+
+10. Design a Custom Navigation bar using React
+
+Question 1
+You’re developing a contact management application to view and add new contacts. The app needs to retrieve and display a list of contacts and allow users to add a new contact by entering their name and clicking a button.
+
+•	Implement a React component that performs the following tasks:
+
+Sends a GET request to https://jsonplaceholder.typicode.com/users when the component mounts to fetch and display a list of contact names. Provides an input field to add a new contact name. When the "Post" button is clicked, a POST request should be sent to add the contact, updating the displayed list.
+
+ 
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+
+const ContactManagement = () => {
+    const [contacts, setContacts] = useState([]);
+    const [newContact, setNewContact] = useState('');
+
+    const handleGetContacts = () => {
+        axios.get("https://jsonplaceholder.typicode.com/users")
+            .then(res => {
+                const fetchedContacts = res.data.map(user => user.name);
+                setContacts(fetchedContacts);
+                console.log("Fetched contacts: ", fetchedContacts);
+            })
+            .catch(err => {
+                console.error("Error fetching contacts: ", err);
+            });
+    };
+
+    const handleAddContact = () => {
+        if (!newContact) {
+            alert("Please enter a contact name");
+            return;
+        }
+
+        // Simulate adding a new contact by sending a POST request
+        axios.post("https://jsonplaceholder.typicode.com/users", { name: newContact })
+            .then(res => {
+                console.log("Added contact: ", res.data);
+                // Update the contact list with the new contact
+                setContacts(prevContacts => [...prevContacts, newContact]);
+                setNewContact('');
+            })
+            .catch(err => {
+                console.error("Error adding contact: ", err);
+            });
+    };
+
+    useEffect(() => {
+        handleGetContacts(); // Fetch contacts on component mount
+    }, []);
+
+    return (
+        <div>
+            <h1>Contact Management</h1>
+            <div>
+                <input
+                    type="text"
+                    placeholder="Enter new contact name"
+                    value={newContact}
+                    onChange={(e) => setNewContact(e.target.value)}
+                />
+                <button onClick={handleAddContact}>Post</button>
+            </div>
+            <h2>Contact List</h2>
+            <ul>
+                {contacts.map((contact, index) => (
+                    <li key={index}>{contact}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+export default ContactManagement;
+Question 2:
+
+In an employee management system, users should be able to update or delete specific employee names in the displayed list. The application must:
+
+•	Provide an input field where users can type the name to update or delete.
+•	Use a Put button to send a PUT request that updates the employee’s name in the database. Use a Delete button to remove an employee’s name from the list.
+ 
+Create a React component that includes:
+•	A PUT request triggered by clicking the Put button to update an employee’s name entered in the input field.
+•	A DELETE request to delete an employee when the Delete button is clicked. Log Successfully deleted on successful deletion.
+
+ 
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const EmployeeManagement = () => {
+  const [employeeName, setEmployeeName] = useState('');
+  const [newEmployeeName, setNewEmployeeName] = useState('');
+
+  const handlePutRequest = async () => {
+    try {
+      const response = await axios.put(`http://localhost:5000/employees`, {
+        currentName: employeeName,
+        newName: newEmployeeName,
+      });
+      console.log('Employee name updated successfully:', response.data);
+      setEmployeeName('');
+      setNewEmployeeName('');
+    } catch (error) {
+      console.error('Error updating employee:', error);
+    }
+  };
+
+  const handleDeleteRequest = async () => {
+    try {
+      await axios.delete(`http://localhost:5000/employees`, {
+        data: { name: employeeName },
+      });
+      console.log('Successfully deleted');
+      setEmployeeName('');
+    } catch (error) {
+      console.error('Error deleting employee:', error);
+    }
+  };
+
+  return (
+    <div>
+      <h2>Employee Management System</h2>
+      <input
+        type="text"
+        placeholder="Current Employee Name"
+        value={employeeName}
+        onChange={(e) => setEmployeeName(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="New Employee Name"
+        value={newEmployeeName}
+        onChange={(e) => setNewEmployeeName(e.target.value)}
+      />
+      <button onClick={handlePutRequest}>Put</button>
+      <button onClick={handleDeleteRequest}>Delete</button>
+    </div>
+  );
+};
+
+export default EmployeeManagement;
+Question 3:
+
+You’re building a to-do list app where users can view and update the names of existing tasks. The component should:
+•	Display a list of all tasks when the component mounts.
+•	Allow the user to update a task’s name by typing a new name in an input field and clicking a "Put" button.
+
+Implement a React component that sends:
+
+•	A GET request to https://jsonplaceholder.typicode.com/users on mount to fetch and display all task names.
+•	A PUT request to update a task’s name when the Put button is clicked. Ensure the updated name is reflected in the displayed list of tasks.
+•	import React, { useEffect, useState } from 'react';
+•	import axios from 'axios';
+•	
+•	const TodoList = () => {
+•	  const [tasks, setTasks] = useState([]);
+•	  const [selectedTaskId, setSelectedTaskId] = useState(null);
+•	  const [newTaskName, setNewTaskName] = useState('');
+•	
+•	  // Fetch tasks on mount
+•	  useEffect(() => {
+•	    const fetchTasks = async () => {
+•	      try {
+•	        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+•	        // Assuming each "user" represents a "task" in this example
+•	        const fetchedTasks = response.data.map((user) => ({
+•	          id: user.id,
+•	          name: user.name,
+•	        }));
+•	        setTasks(fetchedTasks);
+•	      } catch (error) {
+•	        console.error('Error fetching tasks:', error);
+•	      }
+•	    };
+•	
+•	    fetchTasks();
+•	  }, []);
+•	
+•	  // Handle updating a task's name
+•	  const handlePutRequest = async () => {
+•	    if (selectedTaskId === null || newTaskName === '') return;
+•	
+•	    try {
+•	      await axios.put(`https://jsonplaceholder.typicode.com/users/${selectedTaskId}`, {
+•	        name: newTaskName,
+•	      });
+•	      
+•	      // Update the task name in the local state
+•	      setTasks((prevTasks) =>
+•	        prevTasks.map((task) =>
+•	          task.id === selectedTaskId ? { ...task, name: newTaskName } : task
+•	        )
+•	      );
+•	      setNewTaskName('');
+•	      setSelectedTaskId(null);
+•	      console.log('Task updated successfully');
+•	    } catch (error) {
+•	      console.error('Error updating task:', error);
+•	    }
+•	  };
+•	
+•	  return (
+•	    <div>
+•	      <h2>To-Do List</h2>
+•	      <ul>
+•	        {tasks.map((task) => (
+•	          <li key={task.id}>
+•	            {task.name}
+•	          </li>
+•	        ))}
+•	      </ul>
+•	      <div>
+•	        <select onChange={(e) => setSelectedTaskId(Number(e.target.value))} value={selectedTaskId || ''}>
+•	          <option value="" disabled>Select a task to update</option>
+•	          {tasks.map((task) => (
+•	            <option key={task.id} value={task.id}>
+•	              {task.name}
+•	            </option>
+•	          ))}
+•	        </select>
+•	        <input
+•	          type="text"
+•	          placeholder="New Task Name"
+•	          value={newTaskName}
+•	          onChange={(e) => setNewTaskName(e.target.value)}
+•	        />
+•	        <button onClick={handlePutRequest}>Put</button>
+•	      </div>
+•	    </div>
+•	  );
+•	};
+•	
+•	export default TodoList;
