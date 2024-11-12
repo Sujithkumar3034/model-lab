@@ -163,6 +163,7 @@ const WelcomeCard = () => {
 };
 
 export default WelcomeCard;
+
 END
  
 2. Create a Stateful Class Component
@@ -378,6 +379,7 @@ When the button is clicked:
 •	export default LikeProduct;
 
  END
+
 3. Implementation of Conditional Rendering using Class Component
 
 1. A UserStatus component is needed for the social networking platform that will display a login button for users who are not logged in and a personalized welcome message for those who are. The component should be customizable, allowing you to define the button text, the welcome message, and any styling to align with your site’s branding.
